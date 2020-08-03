@@ -1,0 +1,24 @@
+﻿@model Project1.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+
+    
+        <h1>@Model.Name</h1>
+<ul>
+    <li>
+        <strong>Membership Type: </strong> @Model.MembershipType.Name
+    </li>
+    @if (Model.BirthDate != null)
+    {
+<li>
+    <strong>Birth Date: </strong> @Html.TextBoxFor(m => m.BirthDate, "{0:d/M/yyyy}")
+</li>
+    }
+</ul>
+    
+
+
